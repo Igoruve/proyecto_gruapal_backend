@@ -1,1 +1,1 @@
-# proyecto_gruapal_backend
+# proyecto_grupal_backend
