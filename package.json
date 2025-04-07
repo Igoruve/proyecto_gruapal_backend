@@ -1,0 +1,32 @@
+{
+  "name": "proyecto_gruapal_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Igoruve/proyecto_gruapal_backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Igoruve/proyecto_gruapal_backend/issues"
+  },
+  "homepage": "https://github.com/Igoruve/proyecto_gruapal_backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
