@@ -10,9 +10,9 @@ const app = express();
 app.use(express.json()); // para API (formato json)
 app.use(express.urlencoded({extended:true})); // para Vistas (formato formulario)
 
-/* app.set('views', 'src/views');
+app.set('views', 'src/views');
 app.set('view engine', 'pug');
- */
+
 
 
 app.use("/",router);
