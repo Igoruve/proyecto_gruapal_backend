@@ -1,12 +1,13 @@
 import { Router } from "express";
 import userRouter from "../routers/userRouter.js"
+import productRouter from "./productRouter.js"
 const router = Router();
 
 router.get("/", (req, res) => {
   res.send("hello world");
 });
 
-router.use("/user", userRouter);
+// router.use("/user", userRouter);
 
 router.use("/product",productRouter);
 
