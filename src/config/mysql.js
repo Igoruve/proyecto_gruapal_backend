@@ -29,4 +29,4 @@ async function testConnection() {
     }
 }
 
-export { getConnection,testConnection};
+export { getConnection,testConnection };
