@@ -12,15 +12,9 @@ router.get("/", userController.getAll);
 //update
 /* router.get("/:id", userController.getById);
  */
-router.post("/:id", (req, res) => {
-  const id = req.params.id;
-  res.send("Modificamos la info del usuario" + id);
-});
+router.get("/:id", userController.getByID);
 
 //delete
-router.post("/:id/delete", (req, res) => {
-  const id = req.params.id;
-  res.send("Eliminamos el usuario" + id);
-});
+router.get("/:id/delete", userController.remove);
 
 export default router;
