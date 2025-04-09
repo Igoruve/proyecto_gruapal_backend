@@ -10,7 +10,7 @@ const Product = connection.define('product', {
         unique: true
     },
     type: {
-        type: DataTypes.VARCHAR(45),
+        type: DataTypes.STRING(45),
         allowNull: false,
         unique: true
     },
@@ -20,12 +20,17 @@ const Product = connection.define('product', {
         unique: true
     },
     name: {
-        type: DataTypes.VARCHAR(45),
+        type: DataTypes.STRING(45),
         allowNull: false
     },
     stock: {
         type: DataTypes.SMALLINT,
         allowNull: false,
-        
+        unique: true    
+    },
+    description: {
+        type: DataTypes.STRING(250)
     }
-})
+});
+
+export default Product;
