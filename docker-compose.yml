@@ -11,8 +11,6 @@ services:
       - /app/node_modules
     depends_on:
       - mysql
-    env_file:
-      - .env
   mysql:
     container_name: ${DB_HOST}
     image: mysql:8.0
