@@ -75,14 +75,6 @@ async function edit(req, res) {
       },
     }
   );
-  // opción 2
-  // const stand = await userModel.findByPk(id);
-  // stand.name=name;
-  // stand.size=size;
-  // stand.creation_date = creation_date;
-  // stand.stand_category_id=category_id;
-  // await stand.save();
-
   res.redirect("/stand/" + id);
 }
 
