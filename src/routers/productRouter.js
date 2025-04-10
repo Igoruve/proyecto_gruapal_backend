@@ -9,9 +9,19 @@ router.get("/", (req, res) => {
 
 router.post("/:id", productController.getById);
 
-router.post("/:id/delete", (req, res) => {
+router.post("/",(req,res)=>{
+    res.send("Creamos un producto");
+})
+
+router.post("/:id",(req,res)=>{
     const id = req.params.id;
-    res.send("Eliminamos el usuario: ", id);
-});
+    const datos = req.body;
+    res.send("Modificamos el producto ", id);
+})
+
+router.post("/:id/delete",(req,res)=>{
+    const id = req.params.id;
+    res.send("Borramos el producto ", id);
+})
 
 export default router;

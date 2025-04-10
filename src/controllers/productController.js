@@ -1,15 +1,13 @@
-import productModel from "../models/productModel.js";
+import productModel from "../models/product.js";
 
-async function getById(req, res) {
+async function getByID(req,res){
     const id = req.params.id;
-
-    const product = productModel.findByPk(id);
-    if (!product){
-        res.status(404).json({message: "product not found"});
-    }
-    res.status(200).json(product);
+    const product = await productModel.findByPk(id,{
+        include: []
+    });
+    res.json(product);
 }
 
-export default {
-    getById
-};
+export default{
+    getByID
+}
