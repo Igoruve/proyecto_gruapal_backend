@@ -75,20 +75,19 @@ async function edit(req, res) {
       },
     }
   );
-  res.redirect("/stand/" + id);
+  res.redirect("/user/" + id);
 }
 
 async function remove(req, res) {
   const id = req.params.id;
   const response = await userModel.destroy({
     where: {
-      stand_id: id,
+      user_id: id,
     },
   });
   // const stand = await userModel.findByPk(id);
-  // await stand.destroy();
-
-  res.redirect("/stand");
+  // await stand.destro`();
+  res.redirect("/user");
 }
 
 export { getAll, getByID, createForm, create, edit, remove };
