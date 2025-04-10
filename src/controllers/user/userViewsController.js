@@ -3,12 +3,11 @@ import userController from "./userController.js";
 async function getByID(req, res) {
   const id = req.params.id;
   const user = await userController.controllerGetByID(id);
-  res.json(user);
+  res.render("user/show", { user });
 }
 
-async function getAll(req, res) {
-  const user = await userController.controllerGetAll();
-  res.json(user);
+async function createForm(req, res){
+  
 }
 
 async function create(req, res) {
@@ -25,11 +24,10 @@ async function edit(req, res) {
 async function remove(req, res) {
   const id = req.params.id;
   const response = await userController.controllerRemove(id);
-  res.json(response);
+  res.redirect("/user");
 }
 
 export default {
-  getAll,
   getByID,
   create,
   edit,

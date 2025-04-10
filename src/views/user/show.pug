@@ -1,0 +1,7 @@
+extends ../layout
+
+block content 
+    if user 
+        include usercard.pug
+    else 
+        p There is no stand for that id
