@@ -4,6 +4,7 @@ function loginForm(req, res) {
   const { error, message } = req.query;
   res.render("auth/login", { error, message });
 }
+
 function registerForm(req, res) {
   const { error, message } = req.query;
   res.render("auth/register", { error, message });

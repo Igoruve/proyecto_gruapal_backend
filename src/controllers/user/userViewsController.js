@@ -6,10 +6,6 @@ async function getByID(req, res) {
   res.render("user/show", { user });
 }
 
-async function createForm(req, res){
-  
-}
-
 async function create(req, res) {
   const response = await userController.controllerCreate(req.body);
   res.json(response);

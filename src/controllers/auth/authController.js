@@ -42,6 +42,7 @@ async function register(userData) {
 
   return result;
 }
+
 async function login(email, password) {
   if (!email) {
     throw new UserEmailNotProvided();
