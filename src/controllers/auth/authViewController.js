@@ -22,6 +22,7 @@ async function register(req, res) {
       res.redirect(`/register?error=Internal+server+error`);
     }
   }
+  res.json({ message: "wpxmo" });
 }
 
 async function login(req, res) {
