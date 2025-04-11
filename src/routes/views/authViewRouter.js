@@ -2,10 +2,10 @@ import { Router } from "express";
 import authViewController from "../../controllers/auth/authViewController.js";
 const router = Router();
 
-router.get("/login/form", authViewController.loginForm);
+router.get("/login", authViewController.loginForm);
 router.post("/login", authViewController.login);
 
-router.get("/register/form", authViewController.registerForm);
+router.get("/register", authViewController.registerForm);
 router.post("/register", authViewController.register);
 
 router.get("/logout", authViewController.logout);
