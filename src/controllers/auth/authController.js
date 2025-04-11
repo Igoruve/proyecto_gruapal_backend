@@ -21,6 +21,7 @@ async function register(userData) {
   if (!userData.password) {
     throw new UserPasswordNotProvided();
   }
+  userData.create_at=new Date();
   userData.role = userData.role ? userData.role.toLowerCase() : "customer";
   const roles = ["customer"];
   if (!roles.includes(userData.role)) {
