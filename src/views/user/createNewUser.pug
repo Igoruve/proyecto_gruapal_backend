@@ -1,17 +1,9 @@
 extends ../layout
 block content 
-    h1 Create new Account 
+    h1 New User 
     form(action="/stand", method="post") 
         label(for="name") Name 
         input#name(type="text", name="name")
         //-input(id="name", type="text", name="name")
-        label(for="size") Size
-        select#size(name="size") 
-            option(value="small") Small
-            option(value="medium") Medium 
-            option(value="large") Large 
-        label(for="stand_category_id") Category 
-        select#stand_category_id(name="stand_category_id") 
-            each category in categories 
-                option(value=category.stand_category_id)= category.name
+        
         button Submit

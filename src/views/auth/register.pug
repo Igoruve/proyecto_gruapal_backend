@@ -1,0 +1,20 @@
+extends ../layout
+
+block content 
+    
+    form(action="/register", method="post") 
+        label(for="first_name") Name 
+            input(type="text" name="first_name" id="first_name") 
+            label(for="last_name") Last Name 
+            input(type="text" name="last_name" id="last_name") 
+        label(for="email") Email
+            input(type="email" name="email" id="email")
+        label(for="password") Password
+            input(type="password" name="password" id="password")
+        label(for="role") Role 
+        select#role(name="role")
+            option(value="customer") Customer 
+            //- option(value="seller") Seller   
+        
+        button Register
+
