@@ -39,7 +39,7 @@ async function login(req, res) {
     if (error.statusCode) {
       res.redirect(`/login?error=` + error.message);
     } else {
-      res.redirect(`/login?error=Internal+server+error`);
+      res.redirect(`/login?error=Internal+server+error` + error.message);
     }
   }
 }
