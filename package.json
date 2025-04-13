@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/Igoruve/proyecto_gruapal_backend#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.0",
     "pug": "^3.0.3",
     "sequelize": "^6.37.7"

@@ -1,5 +1,4 @@
 services:
-
   app:
     container_name: ${APP_HOST}
     build: .
@@ -26,8 +25,21 @@ services:
       - mysql_data:/var/lib/mysql # se puede comentar
       - ./database:/docker-entrypoint-initdb.d:ro
 
+  # db:
+  #   container_name: ${DB_HOST}
+  #   image: mysql:8.0
+  #   restart: unless-stopped
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+  #     MYSQL_USER: ${DB_USER}
+  #     MYSQL_PASSWORD: ${DB_PASSWORD}
+  #     MYSQL_DATABASE: ${DB_DATABASE}
+  #   ports:
+  #     - ${DB_PORT}:3306
+  #   volumes:
+  #     - ./database/scripts:/docker-entrypoint-initdb.d:ro
+  #     - ./database/conf/mycustom.cnf:/etc/mysql/conf.d/custom.cnf:ro
+  #     - /var/lib/mysql
+
 volumes:
   mysql_data:
-    
-    
-    
