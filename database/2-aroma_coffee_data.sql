@@ -13,19 +13,19 @@ USE `aroma_coffee`;
 -- -----------------------------------------------------
 INSERT INTO `user` (`email`, `password`, `create_at`, `first_name`, `last_name`, `role`) VALUES
 -- Clientes
-('juan.perez@email.com', 'Cafe2025!', '2024-12-15 09:30:00', 'Juan', 'Pérez', 'customer'),
-('maria.lopez@email.com', 'MariaL123', '2025-01-03 14:45:00', 'María', 'López', 'customer'),
-('carlos.rodriguez@email.com', 'Carlos_2025', '2025-01-15 11:20:00', 'Carlos', 'Rodríguez', 'customer'),
-('ana.martinez@email.com', 'AnaM_456', '2025-02-05 16:15:00', 'Ana', 'Martínez', 'customer'),
-('pedro.sanchez@email.com', 'Pedro$789', '2025-02-28 10:10:00', 'Pedro', 'Sánchez', 'customer'),
-('sofia.garcia@email.com', 'Sofia_2025!', '2025-03-10 08:30:00', 'Sofía', 'García', 'customer'),
-('diego.fernandez@email.com', 'Diego_123', '2025-03-15 12:45:00', 'Diego', 'Fernández', 'customer'),
+('juan.perez@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2024-12-15 09:30:00', 'Juan', 'Pérez', 'customer'),
+('maria.lopez@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-01-03 14:45:00', 'María', 'López', 'customer'),
+('carlos.rodriguez@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-01-15 11:20:00', 'Carlos', 'Rodríguez', 'customer'),
+('ana.martinez@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-02-05 16:15:00', 'Ana', 'Martínez', 'customer'),
+('pedro.sanchez@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-02-28 10:10:00', 'Pedro', 'Sánchez', 'customer'),
+('sofia.garcia@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-03-10 08:30:00', 'Sofía', 'García', 'customer'),
+('diego.fernandez@email.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-03-15 12:45:00', 'Diego', 'Fernández', 'customer'),
 -- Vendedores
-('laura.gomez@aromacoffee.com', 'Laura_ACoffee', '2024-11-01 08:00:00', 'Laura', 'Gómez', 'seller'),
-('miguel.torres@aromacoffee.com', 'Miguel_2025', '2024-11-05 09:15:00', 'Miguel', 'Torres', 'seller'),
-('carmen.vega@aromacoffee.com', 'Carmen_Barista', '2024-11-10 07:45:00', 'Carmen', 'Vega', 'seller'),
-('roberto.diaz@aromacoffee.com', 'Roberto$Coffee', '2024-12-01 08:30:00', 'Roberto', 'Díaz', 'seller'),
-('lucia.moreno@aromacoffee.com', 'Lucia_2025!', '2025-01-05 09:00:00', 'Lucía', 'Moreno', 'seller');
+('laura.gomez@aromacoffee.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2024-11-01 08:00:00', 'Laura', 'Gómez', 'seller'),
+('miguel.torres@aromacoffee.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2024-11-05 09:15:00', 'Miguel', 'Torres', 'seller'),
+('carmen.vega@aromacoffee.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2024-11-10 07:45:00', 'Carmen', 'Vega', 'seller'),
+('roberto.diaz@aromacoffee.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2024-12-01 08:30:00', 'Roberto', 'Díaz', 'seller'),
+('lucia.moreno@aromacoffee.com', '$2b$10$I8r1SzcLE3vMO4rc4FO/QOi/gxQYms6kilx4CH7rstVc5e7VnETa6', '2025-01-05 09:00:00', 'Lucía', 'Moreno', 'seller');
 
 -- -----------------------------------------------------
 -- Datos para la tabla `product`
@@ -60,19 +60,19 @@ INSERT INTO `order` (`created_at`, `updated_at`, `user_id`, `take_away`) VALUES
 -- -----------------------------------------------------
 -- Datos para la tabla `order_has_product`
 -- -----------------------------------------------------
-INSERT INTO `order_has_product` (`order_id`, `user_id`, `product_id`) VALUES
-(1, 1, 1), -- Juan pidió un Espresso
-(1, 1, 9), -- Juan también pidió un Croissant
-(2, 2, 3), -- María pidió un Cappuccino
-(3, 3, 5), -- Carlos pidió un Mocha
-(3, 3, 10), -- Carlos también pidió un Sándwich
-(4, 4, 2), -- Ana pidió un Americano
-(4, 4, 9), -- Ana también pidió un Croissant
-(5, 5, 6), -- Pedro pidió un Frappuccino
-(6, 1, 4), -- Juan (segundo pedido) pidió un Latte
-(7, 3, 7), -- Carlos (segundo pedido) pidió un Cold Brew
-(8, 6, 8), -- Sofía pidió un Chai Latte
-(9, 7, 6), -- Diego pidió un Frappuccino
-(9, 7, 10), -- Diego también pidió un Sándwich
-(10, 2, 4), -- María (segundo pedido) pidió un Latte
-(10, 2, 9); -- María también pidió un Croissant
+INSERT INTO `order_has_product` (`order_id`, `product_id`) VALUES
+(1,1), -- Juan pidió un Espresso
+(1,9), -- Juan también pidió un Croissant
+(2,3), -- María pidió un Cappuccino
+(3, 5), -- Carlos pidió un Mocha
+(3, 10), -- Carlos también pidió un Sándwich
+(4, 2), -- Ana pidió un Americano
+(4, 9), -- Ana también pidió un Croissant
+(5, 6), -- Pedro pidió un Frappuccino
+(6, 4), -- Juan (segundo pedido) pidió un Latte
+(7, 7), -- Carlos (segundo pedido) pidió un Cold Brew
+(8, 8), -- Sofía pidió un Chai Latte
+(9, 6), -- Diego pidió un Frappuccino
+(9, 10), -- Diego también pidió un Sándwich
+(10, 4), -- María (segundo pedido) pidió un Latte
+(10, 9); -- María también pidió un Croissant

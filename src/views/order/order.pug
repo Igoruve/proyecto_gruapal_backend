@@ -8,7 +8,6 @@ block content
             h2(class="order-title") My Basket
             h3(class="order-id")=order.order_id
             each product in order.products 
-                include ../product/productCard.pug
-                button Remove from basket
+                include ../product/productCardOrder.pug
         else 
             p There is no product available

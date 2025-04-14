@@ -8,6 +8,14 @@ async function controllerGetByID(id) {
   return order;
 }
 
+async function controllerGetByUserID(id) {
+  const order = await orderModel.findOne({
+    where: {user_id:id},
+    include: productModel
+  });
+  return order;
+}
+
 async function controllerRemove(id) {
   const result = await orderModel.destroy({
     where: {
@@ -19,5 +27,6 @@ async function controllerRemove(id) {
 
 export default {
   controllerGetByID,
+  controllerGetByUserID,
   controllerRemove,
 };

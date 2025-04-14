@@ -1,5 +1,6 @@
 import { Router } from "express";
 import productViewController from "../../controllers/product/productViewController.js";
+import productMiddleware from "../../middlewares/orderProductMiddleware.js";
 
 const router = Router();
 
@@ -7,7 +8,7 @@ const router = Router();
 router.get("/",productViewController.getAll);
 
 //update
-router.get("/:id", productViewController.getByID);
+router.post("/:id", productMiddleware.addToOrder);
 
 //delete
 router.get("/:id/delete", productViewController.remove);
