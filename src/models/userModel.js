@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import  connection  from "../config/sequelize.js";
+import Order from "../models/orderModel.js"
 
 const User = connection.define("user", {
   user_id: {
@@ -35,5 +36,8 @@ const User = connection.define("user", {
     allowNull: false,
   },
 });
+
+User.hasOne(Order,{foreignKey:"user_id"});
+Order.belongsTo(User,{foreignKey:"user_id"});
 
 export default User;

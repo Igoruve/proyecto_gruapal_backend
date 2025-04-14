@@ -40,6 +40,13 @@ class UserInvalidCredentials extends Error {
   }
 }
 
+class NotLogIn extends Error {
+  constructor() {
+    super("You have to be logged to enter to your basket");
+    this.statusCode = 401;
+  }
+}
+
 export {
   UserNameNotProvided,
   UserEmailNotProvided,
@@ -47,4 +54,5 @@ export {
   UserRoleIncorrect,
   UserEmailAlreadyExists,
   UserInvalidCredentials,
+  NotLogIn,
 };

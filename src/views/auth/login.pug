@@ -1,12 +1,13 @@
 extends ../layout
 
 block content 
-    form(action="/login", method="post") 
+    form(action="/login", method="post", class="login-form") 
         
-        label(for="email") Email
-            input(type="email" name="email" id="email")
-        label(for="password") Password
-            input(type="password" name="password" id="password")
+        input(type="email" name="email" id="email" placeholder="Tu email..")
+        input(type="password" name="password" id="password" placeholder="Tu contraseña..")
         
         button Login
+
+        p ¿Todavía no tienes una cuenta?
+        a(href="./register" class="register-link") Crear una nueva cuenta
 

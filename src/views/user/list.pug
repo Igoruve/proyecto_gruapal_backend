@@ -1,12 +1,12 @@
 extends ../layout
 
 block content 
-    h1 Orders 
+    h1 Pedidos 
     section(class="order-list")
-        if order
-            each order in order 
+        if orders
+            each order in orders 
                 a(href=/order/${order.order_id})
                     include orderCard
                     p= order.order_category.name
         else 
-            p There is no order available
+            p No hay un pedido disponible

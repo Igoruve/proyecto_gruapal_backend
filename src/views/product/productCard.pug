@@ -1,0 +1,10 @@
+article 
+    div(class="product-text")
+        div(class="product-specifications")
+            div(class="product-img")
+                img(src=`/assets/${product.name.toLowerCase()}.jpg`, alt="product-img")
+            h2(class="product-name")=product.name
+            p(class="product-description")=product.description 
+        p(class="product-price")=product.price+"€"
+    form(action=`/products/${product.product_id}`, method="post") 
+                    button(class="basket-button") Añadir a la cesta

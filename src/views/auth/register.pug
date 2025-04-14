@@ -2,19 +2,21 @@ extends ../layout
 
 block content 
     
-    form(action="/register", method="post") 
-        label(for="first_name") Name 
-            input(type="text" name="first_name" id="first_name") 
-            label(for="last_name") Last Name 
-            input(type="text" name="last_name" id="last_name") 
-        label(for="email") Email
-            input(type="email" name="email" id="email")
-        label(for="password") Password
-            input(type="password" name="password" id="password")
-        label(for="role") Role 
+    form(action="/register", method="post", class="register-form") 
+        label(for="first_name")  
+            input(type="text" name="first_name" id="first_name" placeholder="Tu nombre..") 
+            label(for="last_name") 
+            input(type="text" name="last_name" id="last_name" placeholder="Tu apellido..") 
+        label(for="email") 
+            input(type="email" name="email" id="email" placeholder="Tu email..")
+        label(for="password") 
+            input(type="password" name="password" id="password" placeholder="Tu contraseña..")
+        label(for="role") Rol 
         select#role(name="role")
-            option(value="customer") Customer 
+            option(value="customer") Cliente 
             //- option(value="seller") Seller   
         
-        button Register
+        button Registrarse
+        
+        a(href="./login" class="login-link")  ¿Ya tienes una cuenta?
 
