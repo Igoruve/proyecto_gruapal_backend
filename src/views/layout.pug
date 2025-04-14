@@ -3,12 +3,13 @@ html
     title Aroma Coffee
     block styles
       link(rel="stylesheet", href="/styles.css")
-  body
+  body 
     include navbar.pug
-    if error 
-        p(class="error")= error
-    if message 
-        p(class="message")= message
-    block content
+    main
+      if error 
+          p(class="error")= error
+      if message 
+          p(class="message")= message
+      block content
     #footer
         p some footer content
