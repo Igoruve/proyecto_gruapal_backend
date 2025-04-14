@@ -1,10 +1,11 @@
 extends ../layout
 
 block content 
-    h1 Orders 
+    h1 Pedidos
     section(class="order")
         if order
-            h2(class="order-title") My Basket
+            article 
+            h2(class="order-title") Mi cesta
             h3(class="order-id")=order.order_id
             - var cost=0
             each product in order.products 
@@ -12,4 +13,4 @@ block content
                 - cost+=product.price
             p(class="total-price")=`Precio total: ${cost}€`
         else 
-            p There is no product available
+            p No hay productos disponibles
