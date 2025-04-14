@@ -1,15 +1,5 @@
 import productController from "./productController.js";
 
-async function getByID(req, res) {
-  try {
-    const id = req.params.id;
-    const product = await productController.controllerGetByID(id);
-    res.render("product/show", { product });
-  } catch (error) {
-    console.error(error);
-    res.render("product", { error: "Internal server error" });
-  }
-}
 
 async function getAll(req, res) {
     try {
@@ -32,7 +22,6 @@ async function remove(req, res) {
 }
 
 export default {
-  getByID,
   getAll,
   remove,
 };
