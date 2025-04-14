@@ -16,6 +16,16 @@ async function controllerGetByUserID(id) {
   return order;
 }
 
+async function controllerCreate(user_id) { 
+  const result = await orderModel.create({
+    user_id:user_id,
+    created_at:new Date(),
+    updated_at:new Date(),
+    take_away:false
+  });
+  return result;
+}
+
 async function controllerRemove(id) {
   const result = await orderModel.destroy({
     where: {
@@ -28,5 +38,7 @@ async function controllerRemove(id) {
 export default {
   controllerGetByID,
   controllerGetByUserID,
+  controllerCreate,
   controllerRemove,
+  
 };

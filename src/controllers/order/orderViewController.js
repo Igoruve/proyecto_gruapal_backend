@@ -7,7 +7,8 @@ async function getByID(req, res) {
     }
     const id = req.session.user.user_id;
 
-    const order = await orderController.controllerGetByID(id);
+    const order = await orderController.controllerGetByUserID(id);
+    console.log("\n \n\nORDER:   " ,order);
     res.render("order/order", { order });
   } catch (error) {
     if (error.statusCode) {

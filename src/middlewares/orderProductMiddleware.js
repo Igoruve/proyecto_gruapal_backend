@@ -11,7 +11,7 @@ async function addToOrder(req, res) {
     res.redirect("/products");
   } catch (error) {
     console.error(error);
-    res.render("product", { error: "Internal server error" });
+    res.redirect("/products");
   }
 }
 

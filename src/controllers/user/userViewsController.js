@@ -14,6 +14,7 @@ async function getByID(req, res) {
 async function create(req, res) {
   try {
     const response = await userController.controllerCreate(req.body);
+    
     res.redirect("/user");
   } catch (error) {
     console.error(error);

@@ -1,4 +1,5 @@
 import authController from "./authController.js";
+import orderController from "../order/orderController.js";
 
 function loginForm(req, res) {
   const { error, message } = req.query;
@@ -13,6 +14,7 @@ function registerForm(req, res) {
 async function register(req, res) {
   try {
     const newUser = await authController.register(req.body);
+    const order = await orderController.controllerCreate(newUser.user_id);
     res.redirect("/login?message=Registered+successfully");
   } catch (error) {
     console.error(error);
@@ -22,7 +24,6 @@ async function register(req, res) {
       res.redirect(`/register?error=Internal+server+error`);
     }
   }
-  res.json({ message: "wpxmo" });
 }
 
 async function login(req, res) {
