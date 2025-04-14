@@ -22,7 +22,6 @@ app.set('views', 'src/views');
 app.set('view engine', 'pug');
 
 
-
 app.use("/",router);
 
 
