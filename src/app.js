@@ -21,10 +21,7 @@ app.use(express.urlencoded({extended:true})); // para Vistas (formato formulario
 app.set('views', 'src/views');
 app.set('view engine', 'pug');
 
-
 app.use("/",router);
-
-
 
 app.listen(3000,()=>{
     console.log(`Backend conectado al puerto ${APP_PORT}`);

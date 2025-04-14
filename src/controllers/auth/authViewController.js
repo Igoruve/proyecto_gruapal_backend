@@ -33,7 +33,7 @@ async function login(req, res) {
       user_id: loggedInUser.user_id,
       role: loggedInUser.role,
     };
-    res.redirect("/?message=You+are+logged+in");
+    res.redirect("/products");
   } catch (error) {
     console.error(error);
     if (error.statusCode) {

@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import connection from "../config/sequelize.js";
+import Product from "./productModel.js"
 
 const Order = connection.define("order", {
     order_id: {
@@ -12,7 +13,7 @@ const Order = connection.define("order", {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
     },
-    create_at: {
+    created_at: {
         type: DataTypes.DATE,
         defaultValue: new Date(),
         allowNull: false,
@@ -26,5 +27,8 @@ const Order = connection.define("order", {
         type: DataTypes.BOOLEAN
     },
 });
+
+Order.belongsToMany(Product, { through: 'order_has_product', foreignKey: "order_id" });
+Product.belongsToMany(Order, { through: 'order_has_product', foreignKey: "product_id" });
 
 export default Order;
