@@ -1,2 +1,10 @@
-article 
-    h2 Holaa
+extends ../layout
+
+block content 
+    h1 Product 
+    section(class="product-list")
+        if products
+            each product in products 
+                include productCard.pug
+        else 
+            p There is no product available

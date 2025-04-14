@@ -4,7 +4,7 @@ import productViewController from "../../controllers/product/productViewControll
 const router = Router();
 
 //create
-router.post("/",productViewController.getAll);
+router.get("/",productViewController.getAll);
 
 //update
 router.get("/:id", productViewController.getByID);
@@ -13,5 +13,3 @@ router.get("/:id", productViewController.getByID);
 router.get("/:id/delete", productViewController.remove);
 
 export default router;
-
-
