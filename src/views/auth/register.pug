@@ -2,7 +2,7 @@ extends ../layout
 
 block content 
     
-    form(action="/register", method="post") 
+    form(action="/register", method="post", class="register-form") 
         label(for="first_name") Name 
             input(type="text" name="first_name" id="first_name") 
             label(for="last_name") Last Name 

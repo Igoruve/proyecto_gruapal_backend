@@ -1,7 +1,8 @@
 article 
-    h2(class="product-name")=product.name
-        p(class="product-description")=product.description 
-    p(class="product-price")=product.price+"€"
-    p(class="product-description")=product.description 
+    div(class="product-text")
+        div(class="product-specifications")
+            h2(class="product-name")=product.name
+            p(class="product-description")=product.description 
+        p(class="product-price")=product.price+"€"
     form(action=`/products/${product.product_id}`, method="post") 
                     button(class="basket-button") Add to basket
