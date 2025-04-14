@@ -1,7 +1,7 @@
 extends ../layout
 
 block content 
-    h1 Orders 
+    h1 Pedidos 
     section(class="order-list")
         if orders
             each order in orders 
@@ -9,4 +9,4 @@ block content
                     include orderCard
                     p= order.order_category.name
         else 
-            p There is no order available
+            p No hay un pedido disponible
