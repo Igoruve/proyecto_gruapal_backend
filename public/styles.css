@@ -157,6 +157,16 @@ img {
     --third-color: #7FA94B;
 }
 
+/* ANIMATIONS */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* ESTILOS GENERALES */
 h1 {
     font-family: var(--main-font); /* TODO CAMBIAR FUENTE */
@@ -207,6 +217,9 @@ header img {
     width: 100%;
     object-fit: cover;
     max-width: 70px;
+}
+header img:hover {
+    animation: spin 1s linear infinite;
 }
 header nav .nav-logo p {
     font-family: var(--main-font);
@@ -449,8 +462,9 @@ footer img {
     width: 150px;
     transition: all .3s ease;
 }
+
 footer img:hover {
-    scale: 110%;
+    animation: spin 1s linear infinite;
 }
 .social {
     display: flex;
