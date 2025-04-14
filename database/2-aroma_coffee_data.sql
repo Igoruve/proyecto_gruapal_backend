@@ -11,7 +11,7 @@ USE `aroma_coffee`;
 -- -----------------------------------------------------
 -- Datos para la tabla `user`
 -- -----------------------------------------------------
-INSERT INTO `user` (`email`, `password`, `create_at`, `first_name`, `last_name`, `role`) VALUES
+INSERT INTO `user` (`email`, `password`, `create_at`, `first_name`, `last_name`, `type`) VALUES
 -- Clientes
 ('juan.perez@email.com', 'Cafe2025!', '2024-12-15 09:30:00', 'Juan', 'Pérez', 'customer'),
 ('maria.lopez@email.com', 'MariaL123', '2025-01-03 14:45:00', 'María', 'López', 'customer'),
@@ -60,19 +60,19 @@ INSERT INTO `order` (`created_at`, `updated_at`, `user_id`, `take_away`) VALUES
 -- -----------------------------------------------------
 -- Datos para la tabla `order_has_product`
 -- -----------------------------------------------------
-INSERT INTO `order_has_product` (`order_id`, `user_id`, `product_id`) VALUES
-(1, 1, 1), -- Juan pidió un Espresso
-(1, 1, 9), -- Juan también pidió un Croissant
-(2, 2, 3), -- María pidió un Cappuccino
-(3, 3, 5), -- Carlos pidió un Mocha
-(3, 3, 10), -- Carlos también pidió un Sándwich
-(4, 4, 2), -- Ana pidió un Americano
-(4, 4, 9), -- Ana también pidió un Croissant
-(5, 5, 6), -- Pedro pidió un Frappuccino
-(6, 1, 4), -- Juan (segundo pedido) pidió un Latte
-(7, 3, 7), -- Carlos (segundo pedido) pidió un Cold Brew
-(8, 6, 8), -- Sofía pidió un Chai Latte
-(9, 7, 6), -- Diego pidió un Frappuccino
-(9, 7, 10), -- Diego también pidió un Sándwich
-(10, 2, 4), -- María (segundo pedido) pidió un Latte
-(10, 2, 9); -- María también pidió un Croissant
+INSERT INTO `order_has_product` (`order_id`, `product_id`) VALUES
+(1,1), -- Juan pidió un Espresso
+(1,9), -- Juan también pidió un Croissant
+(2,3), -- María pidió un Cappuccino
+(3, 5), -- Carlos pidió un Mocha
+(3, 10), -- Carlos también pidió un Sándwich
+(4, 2), -- Ana pidió un Americano
+(4, 9), -- Ana también pidió un Croissant
+(5, 6), -- Pedro pidió un Frappuccino
+(6, 4), -- Juan (segundo pedido) pidió un Latte
+(7, 7), -- Carlos (segundo pedido) pidió un Cold Brew
+(8, 8), -- Sofía pidió un Chai Latte
+(9, 6), -- Diego pidió un Frappuccino
+(9, 10), -- Diego también pidió un Sándwich
+(10, 4), -- María (segundo pedido) pidió un Latte
+(10, 9); -- María también pidió un Croissant
