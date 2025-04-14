@@ -1,0 +1,12 @@
+extends ../layout
+
+block content 
+    h1 Pedidos 
+    section(class="order-list")
+        if orders
+            each order in orders 
+                a(href=/order/${order.order_id})
+                    include orderCard
+                    p= order.order_category.name
+        else 
+            p No hay un pedido disponible

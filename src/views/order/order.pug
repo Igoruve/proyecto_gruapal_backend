@@ -1,0 +1,16 @@
+extends ../layout
+
+block content 
+    h1 Pedidos
+    section(class="order")
+        if order
+            article 
+            h2(class="order-title") Mi cesta
+            h3(class="order-id")=order.order_id
+            - var cost=0
+            each product in order.products 
+                include ../product/productCardOrder.pug
+                - cost+=product.price
+            p(class="total-price")=`Precio total: ${cost}€`
+        else 
+            p No hay productos disponibles
