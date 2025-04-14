@@ -5,6 +5,9 @@ html
       link(rel="stylesheet", href="/styles.css")
   body 
     include navbar.pug
+    div(class="main-img")
+      img(src="/assets/coffee-machine-filling-cup.jpg", alt="coffee-img", class="main-img")
+      p YOUR SPECIALTY COFFEE
     main
       if error 
           p(class="error")= error
