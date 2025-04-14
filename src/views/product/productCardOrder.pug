@@ -1,4 +1,6 @@
 article 
+    div(class="product-img")
+        img(src=`/assets/${product.name.toLowerCase()}.jpg`, alt="product-img")
     h2(class="product-name")=product.name
     p(class="product-price")=product.price+"€"
     p(class="product-description")=product.description 
