@@ -1,7 +1,7 @@
 USE aroma_coffee;
 
 SELECT *
-FROM user;
+FROM orders;
 
 -- Datos de muestra para Aroma Coffee
 -- Generados el 8 de abril de 2025

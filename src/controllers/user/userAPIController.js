@@ -1,5 +1,6 @@
 import userController from "./userController.js";
 
+
 async function getByID(req, res) {
   try {
     const id = req.params.id;
@@ -24,6 +25,7 @@ async function getAll(req, res) {
 async function create(req, res) {
   try {
     const response = await userController.controllerCreate(req.body);
+    
     res.json(response);
   } catch (error) {
     console.error(error);
