@@ -283,26 +283,25 @@ main {
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1em;
+    gap: 3em;
 }
 
 .product-list article {
     width: 100%;
+    height: auto;
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     gap: 1em;
     padding: 1em;
 
     background-color: white;
-    border-radius: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
 
     text-align: left;
 
     transition: all .3s ease;
-}
-.product-list article:hover {
-    background-color: black;
-    color: var(--second-color);
 }
 
 .basket-button {
@@ -316,9 +315,9 @@ main {
     font-size: 1rem;
     font-weight: 600;
 
-    background-color: var(--second-color);
+    background-color: var(--main-color);
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 5px;
 
     cursor: pointer;
 
